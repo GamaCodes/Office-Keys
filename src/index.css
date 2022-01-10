@@ -1,0 +1,63 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+
+.card {
+  position: relative;
+  width: 25rem;
+  color: #444;
+}
+
+.card__img {
+  width: 100%;
+  border-radius: 1rem;
+  transform: translateZ(1.5rem);
+  box-shadow: 0 2rem 1rem -2rem #b36b93;
+}
+
+.card__title {
+  font-size: 2rem;
+  margin: 1.5rem 0 0.5rem;
+  color: #1a63e4;
+  font-weight: 700;
+}
+
+.card--front,
+.card--back {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  position: relative;
+  transition: all 1s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 2rem 5rem -3.5rem rgba(0,0,0,0.15);
+}
+
+.card--front {
+  z-index: 10;
+}
+
+.card--back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    transform: rotateY(-180deg);
+  }
+
+.card:hover > .card--back {
+      transform: rotateY(0deg);
+      z-index: 10;
+    }
+    
+    .card:hover > .card--front {
+      transform: rotateY(180deg);
+      z-index: -1;
+    }
+
+.carousel-image {
+  overflow-x: scroll;
+}
